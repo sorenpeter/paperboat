@@ -8,7 +8,7 @@ You just upload the images of each of your creative projects to a folder and cre
 Then Paperboat will add this to the menu and view the images of your project as a gallery view.
 You can also create simpler pages for your CV or contact information.
 
-You can see it in action on: https://darch.dk/portfolio/
+You can see it in action on: https://darch.dk/paperboat/
 
 Paperboat is still very much a work-in-progress, so always make a backup before trying a new version.
 
