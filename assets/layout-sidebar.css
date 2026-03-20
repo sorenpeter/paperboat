@@ -1,0 +1,68 @@
+/* Layout with sidebar navigation */ 
+
+:root {
+	--siderbar-width: 170px;
+}
+
+body {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: fit-content(20ch) minmax(min(50vw, 30ch), 1fr); /* https://smolcss.dev */
+  margin: 0 2rem;
+} 
+
+header {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: var(--siderbar-width);  /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+}
+
+header h1,
+header img,
+header nav {
+	display: initial;
+}
+
+header nav ul {
+	display: block;
+	padding-left: 0;
+	margin-bottom: 2rem;
+}
+
+header nav ul li {
+	display: block;
+	list-style:none;
+	margin: 1rem 0;
+}
+
+footer {
+	width: var(--siderbar-width);
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	bottom: 0;
+	text-align: initial;
+}
+
+footer .footsteps {
+	display: none;
+}
+
+@media (max-width: 700px) {
+
+	footer {
+		text-align: center;
+		display: block;
+		position: initial;
+		width: 100%;
+	  }
+
+}
+
+main {
+	/*max-width: 100%;*/
+	margin-left: var(--siderbar-width);
+	/*min-width: 700px;*/
+
+	/* Grid: Header+footer to the left, main to the right */
+	grid-column: 2 / span 1;	
+	grid-row: 1 / span 2;	
+}
