@@ -1,0 +1,20 @@
+/* Custom Styling */
+
+:root{
+  --back: #222;
+  --text: #FFE;
+  --link: #9F9;
+  --code: #333;
+}
+
+nav li a,
+nav li a:visited {
+	background: var(--link);
+	color: var(--back);
+	padding: 0.2rem 0.5rem;
+}
+
+nav li a:hover {
+	text-decoration: none;
+	background: var(--text);
+}
