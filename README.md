@@ -3,7 +3,12 @@ Paperboat Portfolio
 
 A simple website for showcaseing your creative works.
 
-Paperboat is still very much a work-in-progress. So alway make a backup before trying a new version.
+The core idea is to make it easy add your works to your website.
+You just upload the images of each of your creative projects to a folder and create a html-file that have any text and links you want with it.
+Then Paperboat will add this to the menu and view the images of your project as a gallery view.
+You can also create simpler pages for your CV or contact information.
+
+Paperboat is still very much a work-in-progress, so always make a backup before trying a new version.
 
 Installation
 ------------
