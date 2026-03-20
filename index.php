@@ -413,20 +413,29 @@ function showNavList() {
 
 	}
 	</style>
-	<!-- <link rel="stylesheet" type="text/css" href="assets/base.css"> -->
-	<?php if ($config["navigation"] == "sidebar") {
+	<?php
+
+	if ($config["navigation"] == "sidebar") {
 		echo '<link rel="stylesheet" type="text/css" href="assets/layout-sidebar.css">';
 	} elseif ($config["navigation"] == "topbar") {
 		echo '<link rel="stylesheet" type="text/css" href="assets/layout-topbar.css">';
+	} 
+	
+	if(file_exists(__DIR__ . "/assets/custom.css")) {
+		echo '<link rel="stylesheet" type="text/css" href="assets/custom.css">';
 	} ?>
-	<link rel="stylesheet" type="text/css" href="assets/custom.css">
+
 	<title><?= $title ?></title>
 </head>
 <body>
 
 <header>
 
-	<h1><a href="<?= $base_url ?>"><img src="assets/logo.png"><?= $site_title ?></a></h1>	
+	<h1>
+		<a href="<?= $base_url ?>">
+			<?php if(file_exists(__DIR__ . "/assets/logo.png")) { echo '<img src="assets/logo.png">'; } ?>
+		<?= $site_title ?></a>
+	</h1>	
 
 	<!-- Mobile Menu (dialog) -->
 	<button id="menu-open" popovertarget="mobile-menu">&#9776;</button>
