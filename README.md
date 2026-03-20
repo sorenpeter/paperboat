@@ -57,9 +57,9 @@ Files and folder
 		- `IMG_0001.jpg` - some image files
 		- `IMG_0002.jpg` - that will be show
 		- `IMG_0003.jpg` - as a gallery
-	- `2016-03-15_paperboat/` - Andother project
+	- `2016-03-15_paperboat/` - Andother project, this one have a date as a prefix
 		- `main.html`
-		- boat.jpg`
+		- `boat.jpg`
 		- `logo.jpg`
 		- `paper.jpg`
 
