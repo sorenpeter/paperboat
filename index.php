@@ -208,6 +208,7 @@ function showNavList() {
 		  --text: Navy;
 		  --link: Salmon;
 		  --code: SeaGreen;
+		  --mute: lightgrey;
 		}
 
 		.error {
@@ -286,6 +287,7 @@ function showNavList() {
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 			grid-gap: 1rem;
+			margin-bottom: 2rem;
 		}
 
 		.grid-view a img {
@@ -293,6 +295,7 @@ function showNavList() {
 			aspect-ratio: 1 / 1;
 			object-fit: cover;
 			cursor: zoom-in;
+			border: thin solid var(--mute);
 		}
 
 		/* iframe for youtube embed etc. */
