@@ -91,10 +91,10 @@ The first `<h1>` within a html-file in the `pages` or `projects` folders determe
 ```
 
 
-![](projects/2026-03-02_paperboat/2026-03_paperboat/0_file_and_folders.png)
-![](projects/2026-03-02_paperboat/2026-03_paperboat/1_topbar.png)
-![](projects/2026-03-02_paperboat/2026-03_paperboat/2_default.png)
-![](projects/2026-03-02_paperboat/2026-03_paperboat/3_sidebar.png)
+![](projects/2026-03_paperboat/2026-03_paperboat/0_file_and_folders.png)
+![](projects/2026-03_paperboat/2026-03_paperboat/1_topbar.png)
+![](projects/2026-03_paperboat/2026-03_paperboat/2_default.png)
+![](projects/2026-03_paperboat/2026-03_paperboat/3_sidebar.png)
 
 
 
