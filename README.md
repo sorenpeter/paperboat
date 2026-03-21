@@ -47,30 +47,29 @@ To add your logo simply upload a files called `logo.png` to the assets-folder.
 Files and folder
 ----------------
 
-- `.htaccess` - hidden file, that is needed for loading paperboat (do NOT edit)
-- `index.php` - this is the main program (do NOT edit)
-- `settings.ini` - this is where you change your settings (please do edit)
-
-* `assets/` - all the general files goes here
-	- `layout-sidebar.css`
-	- `custom.css`
-	- `logo.png`
-	- `favicon.png`
-* `pages/` - where you pages live
-	- `00_home.html` - the file called `home` is the frontpage of your portfolio
-	- `01_about.html` - an about page. the name of this file without the prefix numbers determens the path to the page
-	- `02_contact.html` - and a contact page
-* `projects/`
-	- `00_myfirstproject/` - this is a project. the name of this folder without the prefix numbers determens the path to the project
-		- `main.html` - this is the content of the my first project. this can be names anything as long as it ends in `.html`
-		- `IMG_0001.jpg` - some image files
-		- `IMG_0002.jpg` - that will be show
-		- `IMG_0003.jpg` - as a gallery
-	- `2016-03-15_paperboat/` - Andother project, this one have a date as a prefix
-		- `main.html`
-		- `boat.jpg`
-		- `logo.jpg`
-		- `paper.jpg`
+* 📂 `assets/` - all the general files goes here
+	- 📄 `layout-sidebar.css`
+	- 📝`custom.css`
+	- 🖼️`logo.png`
+	- 🖼️`favicon.png`
+* 📂 `pages/` - where you pages live
+	- 📝`00_home.html` - the file called `home` is the frontpage of your portfolio
+	- 📝`01_about.html` - an about page. the name of this file without the prefix numbers determens the path to the page
+	- 📝`02_contact.html` - and a contact page
+* 📂 `projects/`
+	- 📂 `00_myfirstproject/` - this is a project. the name of this folder without the prefix numbers determens the path to the project
+		- 📝`main.html` - this is the content of the my first project. this can be names anything as long as it ends in `.html`
+		- 🖼️ `IMG_0001.jpg` - some image files
+		- 🖼️ `IMG_0002.jpg` - that will be show
+		- 🖼️ `IMG_0003.jpg` - as a gallery
+	- 📂`2016-03-15_paperboat/` - Andother project, this one have a date as a prefix
+		- 📝 `main.html`
+		- 🖼️ `boat.jpg`
+		- 🖼️ `logo.jpg`
+		- 🖼️ `paper.jpg`
+- ⚙️ `.htaccess` - hidden file, that is needed for loading paperboat (do NOT edit)
+- ⚙️ `index.php` - this is the main program (do NOT edit)
+- 📝 `settings.ini` - this is where you change your settings (please do edit)
 
 
 Inside the HTML
