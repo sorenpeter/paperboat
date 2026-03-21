@@ -91,6 +91,9 @@ The first `<h1>` within a html-file in the `pages` or `projects` folders determe
 ```
 
 
+Screenshots
+-----------
+
 ![](projects/2026-03_paperboat/0_file_and_folders.png)
 ![](projects/2026-03_paperboat/1_topbar.png)
 ![](projects/2026-03_paperboat/2_default.png)
