@@ -275,6 +275,7 @@ function showNavList() {
 		main {
 			max-width: 900px;
 			margin: 0 auto;
+			width: 100%;
 		}
 
 		main h1 {

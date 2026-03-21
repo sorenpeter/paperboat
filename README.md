@@ -12,14 +12,16 @@ You can see it in action on: https://darch.dk/paperboat/
 
 Paperboat is still very much a work-in-progress, so always make a backup before trying a new version.
 
-Installation
-------------
+Installation and setup
+----------------------
 
 0. You need a webhosting with PHP and a domain
-1. Upload the content of the zip to the root folder or subfolder via FTP
+1. Download the [zip from github](https://github.com/sorenpeter/paperboat/archive/refs/heads/main.zip)
+2. Upload the content of the zip to the root folder or subfolder via FTP
 	- Make sure to get the hidden `.htaccess` next to `index.php` uploaded as well
-2. Open `settings.ini` and add your info and set your perfered layout
-3. Add your projects and pages 
+3. Open `settings.ini` and add your info and set your perfered layout
+4. Add your projects and pages
+5. Customize the look and feel
 
 
 Adding pages and projects
@@ -30,8 +32,8 @@ Paperboat have support for projects and pages.
 - Projects are folder within the projects-folder with an html-file and images, that is renders as gallery view.
 - Pages are html-files within the pages-folder
 
-Customization
--------------
+Customize the look and feel
+---------------------------
 
 Paperboat comes with some very basic layout and color scheme that you can customize by adding a `custom.css` in the assets-folder.
 
@@ -87,6 +89,12 @@ The first `<h1>` within a html-file in the `pages` or `projects` folders determe
 
 <p>And anoter paragraph</p>
 ```
+
+
+![](projects/2026-03-02_paperboat/2026-03_paperboat/0_file_and_folders.png)
+![](projects/2026-03-02_paperboat/2026-03_paperboat/1_topbar.png)
+![](projects/2026-03-02_paperboat/2026-03_paperboat/2_default.png)
+![](projects/2026-03-02_paperboat/2026-03_paperboat/3_sidebar.png)
 
 
 

@@ -1,0 +1,102 @@
+<h1>Paperboat Portfolio</h1>
+
+<p>A simple website for showcaseing your creative works.</p>
+
+<h2>Readme and Screenshots</h2>
+
+
+<p>GitHub repo: <a href="https://github.com/sorenpeter/paperboat">https://github.com/sorenpeter/paperboat</a></p>
+	
+<p>The core idea is to make it easy add your works to your website.
+You just upload the images of each of your creative projects to a folder and create a html-file that have any text and links you want with it.
+Then Paperboat will add this to the menu and view the images of your project as a gallery view.
+You can also create simpler pages for your CV or contact information.</p>
+<p>You can see it in action on: <a href="https://darch.dk/paperboat/">https://darch.dk/paperboat/</a></p>
+<p>Paperboat is still very much a work-in-progress, so always make a backup before trying a new version.</p>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>You need a webhosting with PHP and a domain</li>
+<li>Upload the content of the zip to the root folder or subfolder via FTP<ul>
+<li>Make sure to get the hidden <code>.htaccess</code> next to <code>index.php</code> uploaded as well</li>
+</ul>
+</li>
+<li>Open <code>settings.ini</code> and add your info and set your perfered layout</li>
+<li>Add your projects and pages </li>
+</ol>
+<h2 id="adding-pages-and-projects">Adding pages and projects</h2>
+<p>Paperboat have support for projects and pages.</p>
+<ul>
+<li>Projects are folder within the projects-folder with an html-file and images, that is renders as gallery view.</li>
+<li>Pages are html-files within the pages-folder</li>
+</ul>
+<h2 id="customization">Customization</h2>
+<p>Paperboat comes with some very basic layout and color scheme that you can customize by adding a <code>custom.css</code> in the assets-folder.</p>
+<p>To help you gettings started is a <code>custom_template.css</code> you can rename or copy to <code>custom.css</code></p>
+<p>Besides the default layout, two more are included, called <code>sidebar</code> and <code>topbar</code>. You can activate from the <code>settings.ini</code>.</p>
+<p>To add your logo simply upload a files called <code>logo.png</code> to the assets-folder.</p>
+<h2 id="files-and-folder">Files and folder</h2>
+<ul>
+<li><code>.htaccess</code> - hidden file, that is needed for loading paperboat (do NOT edit)</li>
+<li><code>index.php</code> - this is the main program (do NOT edit)</li>
+<li><p><code>settings.ini</code> - this is where you change your settings (please do edit)</p>
+</li>
+<li><p><code>assets/</code> - all the general files goes here</p>
+<ul>
+<li><code>layout-sidebar.css</code></li>
+<li><code>custom.css</code></li>
+<li><code>logo.png</code></li>
+<li><code>favicon.png</code></li>
+</ul>
+</li>
+<li><code>pages/</code> - where you pages live<ul>
+<li><code>00_home.html</code> - the file called <code>home</code> is the frontpage of your portfolio</li>
+<li><code>01_about.html</code> - an about page. the name of this file without the prefix numbers determens the path to the page</li>
+<li><code>02_contact.html</code> - and a contact page</li>
+</ul>
+</li>
+<li><code>projects/</code><ul>
+<li><code>00_myfirstproject/</code> - this is a project. the name of this folder without the prefix numbers determens the path to the project<ul>
+<li><code>main.html</code> - this is the content of the my first project. this can be names anything as long as it ends in <code>.html</code></li>
+<li><code>IMG_0001.jpg</code> - some image files</li>
+<li><code>IMG_0002.jpg</code> - that will be show</li>
+<li><code>IMG_0003.jpg</code> - as a gallery</li>
+</ul>
+</li>
+<li><code>2016-03-15_paperboat/</code> - Andother project, this one have a date as a prefix<ul>
+<li><code>main.html</code></li>
+<li><code>boat.jpg</code></li>
+<li><code>logo.jpg</code></li>
+<li><code>paper.jpg</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="inside-the-html">Inside the HTML</h2>
+<p>The first <code>&lt;h1&gt;</code> within a html-file in the <code>pages</code> or <code>projects</code> folders determens the title of the page or project as is what is show in the navigation menu.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Name of my project<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://example.com"</span>&gt;</span>This is a Link to example.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>This is a sub heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>And anoter paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<h2 id="ideas-for-furture-features">Ideas for furture features</h2>
+<ul>
+<li>Thumnails and grid view of all the projects</li>
+<li>Markdown support</li>
+<li>Admin panel for uploading and editing content</li>
+<li>Favicon</li>
+<li>Blog feature for post and rss </li>
+</ul>
+<h2 id="inspiration-shoutouts">Inspiration / Shoutouts</h2>
+<ul>
+<li>Stancy</li>
+<li>Indexhibt</li>
+<li>Feber: one php-file calender</li>
+<li>Yellow</li>
+<li>Lichen-md</li>
+</ul>
