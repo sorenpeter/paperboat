@@ -1,6 +1,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 DirectoryIndex index.html index.php
+
+# Remove ?fbclid=xxxx tracking
+RewriteCond %{QUERY_STRING} ^(.+?&|)fbclid=[^&]*(?:&(.*)|)$
+RewriteRule ^ %{REQUEST_URI}?%1%2 [R=301,L]
+
 RewriteRule ^(content|system)/ error [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
