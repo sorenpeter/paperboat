@@ -14,16 +14,17 @@ $email = $config["email"];
 
 // Global variables and arraies
 $base_path = preg_replace("/index.php/i", "", $_SERVER['PHP_SELF']);
-$base_url = "http://" . $_SERVER['SERVER_NAME'] . $base_path;
-
+$base_url = "https://" . $_SERVER['SERVER_NAME'] . $base_path;
 
 $routes = []; 	 // Routing table: [ "SLUG" => "PATH_TO_FILE" ]
 $projects = []; // Array of projects
 $pages = [];   // Array of pages 
 
 $current_slug = ltrim(preg_replace($base_path, "", $_SERVER['REQUEST_URI']), "/");
+$current_slug = parse_url($current_slug, PHP_URL_PATH);
 $current_view = [];
 $main_content = "";
+
 
 // TODO: make this function work...
 function addSlugToRoutes($slug, $file_path, $routes) {
