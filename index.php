@@ -21,10 +21,9 @@ $projects = []; // Array of projects
 $pages = [];   // Array of pages 
 
 $current_slug = ltrim(preg_replace($base_path, "", $_SERVER['REQUEST_URI']), "/");
-$current_slug = parse_url($current_slug, PHP_URL_PATH);
+$current_slug = parse_url($current_slug, PHP_URL_PATH); // Removes QUERY from  slug
 $current_view = [];
 $main_content = "";
-
 
 // TODO: make this function work...
 function addSlugToRoutes($slug, $file_path, $routes) {
@@ -124,7 +123,7 @@ foreach ($get_projects as $path) {
 	//echo "<hr>";
 
 	// Add the sub-array to $projects
-	$projects[] = $new_project;
+	$projects[$get_slug] = $new_project;
 
 	// Apped slug and path to html as key-value pair to routing table
 	$routes += [$get_slug => $get_html];
@@ -138,11 +137,9 @@ print_r($projects);
 echo "<h4>pages:</h4>";
 print_r($pages);
 
+echo "<h4>routes</h4>";
+print_r($routes);
 */
-
-// echo "<h4>routes</h4>";
-// print_r($routes);
-
 
 /* == Routing == */
 
@@ -158,14 +155,12 @@ elseif (array_key_exists($current_slug, $routes)) {
 	// Get main content from html file
 	$main_content = file_get_contents($routes[$current_slug]) or die("Unable to open file: " . $routes[$current_slug]);
 
-	// Get title via projecs or pages array
-	$current_key = array_search($current_slug, array_column($projects, 'slug'));
-	
-	if (!empty($current_key)) {
-		$current_view = $projects[$current_key];
+	// Set current view base on projects array or pages array
+	if (isset($projects[$current_slug])) {
+		$current_view = $projects[$current_slug];
 	} else {
-		$current_key = array_search($current_slug, array_column($pages, 'slug'));
-		$current_view = $pages[$current_key];		
+		$key = array_search($current_slug, array_column($pages, 'slug'));
+		$current_view = $pages[$key];
 	}
 
 	$title = $current_view["title"] . " - " . $site_title;
@@ -320,19 +315,40 @@ function showNavList() {
 
 		@media (max-width: 700px) {
 
+			/** {border: thin solid green;}*/
+
 			html {
 				padding: 0.5rem;
 			}
 
-			body, header, main {
+			body, main {
 				display: initial !important;
-				position: initial !important;
 				margin: initial !important;
+			}
+
+			body {
+				display: grid;
+				grid-template: 3rem auto;
+				margin: 0;
+			}
+
+			header {
+				padding: 0 !important;
+				margin: 0;
+				display: flex;
+				position: initial !important;
+				justify-content: space-between;
+				height: 3rem !important;
+				width: 100% !important;
+				padding-bottom: 0.5rem !important;
+				border-bottom: thin solid var(--text);
 			}
 
 			header h1 {
 				margin: 0;
 				display: block;
+				font-size: clamp(16px, 7vw, 32px);
+				text-wrap: nowrap;
 			}
 
 			header h1 img {
@@ -373,9 +389,9 @@ function showNavList() {
 			}
 
 			button#menu-open {
-				position: absolute;
-				top: 0.5rem;
-				right: 1rem;
+				/*position: absolute;*/
+				/*top: 0.5rem;*/
+				/*right: 1rem;*/
 				background-color: transparent;
 				font-weight: bold;
 				color: var(--text);
@@ -389,12 +405,12 @@ function showNavList() {
 			}
 
 			dialog#mobile-menu {
-				margin-top: 4rem;
+				margin-top: 4.1rem;
 				height: 100%;
 				width: 100%;
 				background: var(--back);
 				border: none;
-				border-top: thin solid var(--text);
+				/*border: thin solid var(--text);*/
 			}
 
 			dialog#mobile-menu nav {
@@ -481,8 +497,7 @@ function showNavList() {
 <?php
 
 // TODO: Make into short code: <!-- GALLERY -->
-
-if (!empty($current_view["folder"])){
+if (isset($current_view["folder"])){
 
 	// Gallery for images in project
 	$images = glob($current_view["folder"] . "/*.{jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF,svg,SVG,webp,WEBP}", GLOB_BRACE);
@@ -493,7 +508,7 @@ if (!empty($current_view["folder"])){
 	foreach ($images as $img) {
 		// echo '<a href="'.$num.'" alt="'.$num.'" style=cursor:zoom-in>';
 	    echo '<a href="'.$img.'" alt="'.$img.'">';
-	    echo '<img class="gallery grid" src="'.$img.'" alt="'.$img.'" loading=lazy>';
+	    echo '<img src="'.$img.'" alt="'.$img.'" loading=lazy>';
 	    echo '</a>';
 	}
 	echo '</div>';
