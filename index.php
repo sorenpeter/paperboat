@@ -527,4 +527,4 @@ if (isset($current_view["folder"])){
 </footer>
 
 </body>
-</html
+</html>
