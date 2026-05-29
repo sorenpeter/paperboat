@@ -1,5 +1,5 @@
 
-# <mark>Repo have been move to [codeberg](https://codeberg.org/sorenpeter/paperboat) due to microslop poo-pilot</mark>
+# <mark>Repo have been moved to [Codeberg](https://codeberg.org/sorenpeter/paperboat) due to microslop poo-pilot</mark>
 
 ---
 
